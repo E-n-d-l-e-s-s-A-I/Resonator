@@ -1,0 +1,15 @@
+.link {
+    @include reset-link;
+
+    display: inline-flex;
+    column-gap: 10px;
+    align-items: center;
+
+    font-family: var(--font-family-alt);
+    font-weight: 700;
+    font-size: 15px;
+
+    @include hover {
+        opacity: var(--opacity);
+    }
+}

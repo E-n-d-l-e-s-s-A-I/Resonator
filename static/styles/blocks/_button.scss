@@ -1,0 +1,7 @@
+.button {
+    @include reset-button;
+
+    @include hover {
+        opacity: var(--opacity);
+    }
+}

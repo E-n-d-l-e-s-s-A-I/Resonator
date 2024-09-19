@@ -1,0 +1,16 @@
+.volume-button {
+    @include square(50px);
+    @include flex-center;
+
+    @include mobile {
+        align-items: end;
+    }
+
+    &--small-mobile {
+        @include mobile {
+            align-items: center;
+            @include square(25px);
+        }
+
+    }
+}

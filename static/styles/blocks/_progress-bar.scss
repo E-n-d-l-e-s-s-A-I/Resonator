@@ -1,0 +1,41 @@
+.progress-bar {
+    --lineColor: var(--color-dark);
+
+    height: 1px;
+    width: 100%;
+    padding-block: 5px;
+    // max-width: 574px;
+    position: relative;
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+
+
+
+    @include hover {
+        --lineColor: var(--color-gray-accent);
+
+    }
+
+    &::before {
+        @include square(12px);
+
+        content: "";
+        position: absolute;
+        background-color: var(--lineColor);
+        border-radius: 50%;
+        top: 50%;
+        left: 0;
+        translate: -100% -50%;
+    }
+
+    &::after {
+        @include abs-center;
+
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: var(--lineColor);
+        border-radius: 37%;
+    }
+
+}

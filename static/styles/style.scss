@@ -1,0 +1,22 @@
+@import "normalize",
+"fonts",
+"mixins",
+"media",
+"variables",
+"utils",
+"global";
+
+@import "./blocks/section",
+"./blocks/button",
+"./blocks/link",
+"./blocks/search-button",
+"./blocks/play-button",
+"./blocks/rewind-button",
+"./blocks/progress-bar",
+"./blocks/volume-button",
+"./blocks/headline-podcast-card",
+"./blocks/controlls",
+"./blocks/podcast-info";
+
+@import "./blocks/header",
+"./blocks/headline-podcast";

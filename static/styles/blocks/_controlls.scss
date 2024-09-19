@@ -1,0 +1,64 @@
+.controlls {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        align-items: end;
+    }
+
+    @include mobile-s {
+        row-gap: 0;
+        align-items: center;
+    }
+
+    &__play-button {
+        margin-right: 12px;
+        flex-shrink: 0;
+
+        @include mobile {
+            margin-right: 0;
+        }
+    }
+
+    &__rewind-button {
+        flex-shrink: 0;
+    }
+
+    &__progress-bar {
+        flex-grow: 1;
+
+        @include mobile-above {
+            margin-left: 15px;
+        }
+
+        @include mobile {
+            order: 3;
+        }
+    }
+
+    &__times {
+        min-width: 95px;
+        margin-left: 10px;
+        color: var(--color-gray);
+        font-size: 14px;
+
+        @include mobile {
+            margin-left: auto;
+        }
+
+        @include mobile-s {
+            margin-left: 0;
+            order: 1;
+            width: 70%;
+        }
+    }
+
+    &__volume-button {
+        @include mobile-s {
+            order: 2;
+            margin-left: auto;
+        }
+    }
+}

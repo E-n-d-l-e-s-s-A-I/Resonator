@@ -1,0 +1,16 @@
+.play-button {
+    @include square(70px);
+    background-color: inherit;
+    border: #CECECE 1px solid;
+    border-radius: 50%;
+
+    @include hover {
+        background-color: var(--color-gray-accent);
+    }
+
+    &--small-mobile {
+        @include mobile {
+            @include square(35px);
+        }
+    }
+}

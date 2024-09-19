@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <title>Resonator</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+
+            <div class="header__navigation">
+                <a href="#" class="header__logo logo">
+                    <img src="./static/icons/logo.png" alt="Resonator" loading="lazy" width="132" height="20">
+                </a>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link header__menu-link--active">Homes</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Pages</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Podcast</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Blog</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Shop</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <button class="header__search-button search-button button">
+
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.4176 14.3715L9.96035 9.5085C10.9646 8.45775 11.5166 7.08375 11.5166 5.625C11.5166 4.12275 10.9316 2.70975 9.86885 1.64775C8.8061 0.58575 7.39385 0 5.8916 0C4.38935 0 2.97635 0.585 1.91435 1.64775C0.852352 2.7105 0.266602 4.12275 0.266602 5.625C0.266602 7.12725 0.851601 8.54025 1.91435 9.60225C2.9771 10.6643 4.38935 11.25 5.8916 11.25C7.1861 11.25 8.4131 10.8157 9.4076 10.0162L13.8649 14.8785C13.9391 14.9595 14.0396 15 14.1416 15C14.2324 15 14.3231 14.9677 14.3951 14.9017C14.5481 14.7615 14.5579 14.5245 14.4184 14.3722L14.4176 14.3715ZM1.01585 5.625C1.01585 2.937 3.20285 0.75 5.89085 0.75C8.57885 0.75 10.7659 2.937 10.7659 5.625C10.7659 8.313 8.57885 10.5 5.89085 10.5C3.20285 10.5 1.01585 8.313 1.01585 5.625Z"
+                                fill="black" />
+                        </svg>
+                        <div>Search</div>
+
+                    </button>
+                    <button class="header__burger-button burger-button button"><img
+                            src="./static/icons/burger-button.svg" alt="open menu" loading="lazy" width="25"
+                            height="25"></button>
+                </div>
+            </div>
+
+            <div class="header__body hidden-mobile-s">
+                <h1 class="header__body-title">New episode available now</h1>
+                <div class="header__body-description">Available on Apple Soundcast and Spotify.</div>
+                <ul class="header__body-soc1als">
+                    <li class="header__body-soc1als-item">
+                        <a href="#" class="header__body-soc1als-link">
+                            <img src="./static/icons/apple-podcast.svg" alt="apple podcast" loading="lazy" width="185"
+                                height="54">
+                        </a>
+                    </li>
+                    <li class="header__body-soc1als-item">
+                        <a href="#" class="header__body-soc1als-link">
+                            <img src="./static/icons/soundcloud.svg" alt="soundcloud" loading="lazy" width="174"
+                                height="54">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="headline-podcast section container">
+        <header class="headline-podcast__header">
+            <!-- через хеддер запозиционируем -->
+            <article class="headline-podcast-card">
+                <img class="headline-podcast-card__image" src="./static/images/headline-podcast/1.jpg" alt=""
+                    loading="lazy" width="291" height="291">
+
+                <div class="headline-podcast-card__body">
+                    <div class="headline-podcast-card__body-information">
+                        <h3 class="headline-podcast-card__body-title">Timmy Mike: the nature of design</h3>
+                        <div class="headline-podcast-card__body-description">
+                            <span class="headline-podcast-card__body-description-name">Episode 1</span> •
+                            <span class="headline-podcast-card__body-description-equipment">Microphone</span> •
+                            <span class="headline-podcast-card__body-description-duration">0:13</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="headline-podcast-card__body-link link">
+                        Episode page
+                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_5_4187)">
+                                <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                                <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                    stroke-width="0.989583" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_5_4187">
+                                    <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </a>
+
+                    <div class="headline-podcast-card__body-controlls controlls">
+                        <button class="controlls__play-button play-button play-button--small-mobile button"></button>
+                        <button
+                            class="controlls__rewind-button rewind-button rewind-button--small-mobile button">10s</button>
+                        <button
+                            class="controlls__rewind-button rewind-button rewind-button--small-mobile button">10s</button>
+                        <div class="controlls__progress-bar progress-bar"></div>
+                        <div class="controlls__times">
+                            <span class="controlls__times-current-time">00:00</span> / <span
+                                class="controlls__times-total-time">00:00</span>
+                        </div>
+                        <button class="controlls__volume-button volume-button volume-button--small-mobile button">
+                            <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.62866 3.06412C9.97885 3.21976 10.154 3.49214 10.154 3.88124V15.0875C10.154 15.4766 9.97885 15.7489 9.62866 15.9046C9.47302 15.9824 9.33683 16.0213 9.2201 16.0213C9.06446 16.0213 8.8699 15.9435 8.63644 15.7879L4.84267 12.7528H1.74928C1.12671 12.7528 0.81543 12.4416 0.81543 11.819V7.14972C0.81543 6.52716 1.12671 6.21587 1.74928 6.21587H4.84267L8.63644 3.12249C8.79208 3.00576 8.98664 2.94739 9.2201 2.94739C9.33683 2.94739 9.47302 2.9863 9.62866 3.06412ZM23.1695 9.48435C23.1695 13.0252 21.9049 16.0602 19.3757 18.5894C19.2201 18.7451 19.045 18.8229 18.8504 18.8229C18.6948 18.8229 18.5392 18.7451 18.3835 18.5894C18.0333 18.2781 18.0333 17.9474 18.3835 17.5972C20.6403 15.4182 21.7687 12.7139 21.7687 9.48435C21.7687 6.25478 20.6403 3.5505 18.3835 1.37152C18.0333 1.02132 18.0333 0.690582 18.3835 0.379297C18.7337 0.0680141 19.0645 0.0680141 19.3757 0.379297C21.9049 2.90848 23.1695 5.9435 23.1695 9.48435ZM16.8076 2.77229C18.5975 4.64 19.4925 6.87735 19.4925 9.48435C19.4925 12.0914 18.5975 14.3287 16.8076 16.1964C16.652 16.3521 16.4769 16.4299 16.2824 16.4299C16.1267 16.4299 15.9711 16.3521 15.8154 16.1964C15.4652 15.8462 15.4458 15.5155 15.7571 15.2042C17.3135 13.6478 18.0917 11.7412 18.0917 9.48435C18.0917 7.22755 17.3135 5.32093 15.7571 3.76451C15.4458 3.45323 15.4652 3.12249 15.8154 2.77229C16.1656 2.4221 16.4964 2.4221 16.8076 2.77229ZM13.831 5.16529C14.9983 6.41043 15.582 7.85011 15.582 9.48435C15.582 11.1186 14.9983 12.5583 13.831 13.8034C13.7143 13.9202 13.5392 13.9785 13.3057 13.9785C13.1111 13.9785 12.9555 13.9202 12.8388 13.8034C12.5275 13.4921 12.5275 13.1614 12.8388 12.8112C13.7337 11.9163 14.1812 10.8073 14.1812 9.48435C14.1812 8.1614 13.7337 7.05245 12.8388 6.15751C12.5275 5.80731 12.5275 5.47657 12.8388 5.16529C13.1501 4.854 13.4808 4.854 13.831 5.16529Z"
+                                    fill="black" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </header>
+
+        <div class="headline-podcast__body">
+            <div class="headline-podcast__body-info">
+                <h2 class="headline-podcast__body-title">Best places to find design inspiration</h2>
+                <div class="headline-podcast__body-podcast-info podcast-info">
+                    <button class="podcast-info__play-button play-button"></button>
+                    <div class="podcast-info__info">
+                        <h3 class="podcast-info__title">Episode 1</h3>
+                        <div class="podcast-info__description">
+                            <span class="podcast-info__category">Category</span> •
+                            <span class="podcast-info__duration">0:13</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="headline-podcast__body-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip.<br><br>Ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit
+                        esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum. </p>
+                </div>
+
+                <a href="#" class="headline-podcast__body-link link">Episode page
+                    <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_5_4187)">
+                            <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                            <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                stroke-width="0.989583" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_5_4187">
+                                <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+
+            <img class="headline-podcast__body-image" src="./static/images/headline-podcast/2.jpg" alt="" loading="lazy"
+                width="525" height="519">
+        </div>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+.rewind-button {
+    @include square(46px);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    color: var(--color-gray);
+    font-size: 13px;
+
+    &--small-mobile {
+        @include mobile {
+            @include square(30px);
+        }
+    }
+}
