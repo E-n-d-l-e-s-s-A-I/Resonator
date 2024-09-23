@@ -1,0 +1,127 @@
+.footer {
+    background-color: var(--color-dark);
+    padding-top: 134px;
+    padding-bottom: 147px;
+
+    @include desktop {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include tablet {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: end;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 40px;
+        }
+
+        &--small-row-gap-mobile {
+
+            @include mobile {
+                row-gap: 10px;
+            }
+        }
+
+        &-item {
+            width: 332px;
+
+            @include mobile {
+                width: auto;
+                text-align: center;
+            }
+        }
+    }
+
+
+    &__header {
+        @include margin-bottom(113px);
+
+        display: flex;
+        column-gap: 30px;
+
+        @include desktop {
+            @include margin-bottom(50px);
+        }
+
+        @include mobile {
+            @include margin-bottom(50px);
+
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        min-width: 302px;
+        color: var(--color-gray-alt);
+
+        @include mobile {
+            min-width: auto;
+        }
+    }
+
+    &__title {
+        color: var(--color-light);
+        max-width: 602px;
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &__contacts {
+        @include margin-bottom(80px);
+
+        @include desktop {
+            @include margin-bottom(50px);
+        }
+
+        @include tablet {
+            @include margin-bottom(40px);
+        }
+
+        &-title {
+            @include margin-bottom(24px);
+
+            color: var(--color-gray-alt);
+
+            @include desktop {
+                @include margin-bottom(20px);
+            }
+
+            @include tablet {
+                @include margin-bottom(15px);
+            }
+        }
+
+        &-body {
+            color: var(--color-gray-accent);
+
+            a {
+                @include hover {
+                    opacity: var(--opacity);
+                }
+            }
+        }
+    }
+
+    &__extra {
+        &-link {
+            color: var(--color-gray-alt);
+            font-size: 13px;
+
+            @include hover {
+                opacity: var(--opacity);
+            }
+        }
+    }
+}

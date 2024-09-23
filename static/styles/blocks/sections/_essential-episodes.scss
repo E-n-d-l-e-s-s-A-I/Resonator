@@ -1,0 +1,17 @@
+.essential-episodes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 240px;
+
+    @include desktop {
+        row-gap: 150px;
+    }
+
+    @include tablet {
+        row-gap: 100px;
+    }
+
+    @include mobile {
+        row-gap: 50px;
+    }
+}
