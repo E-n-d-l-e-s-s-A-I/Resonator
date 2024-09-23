@@ -1,0 +1,10 @@
+.logo {
+    @include hover {
+        opacity: var(--opacity);
+    }
+
+    &description {
+        margin-top: 11px;
+        font-size: 13px;
+    }
+}

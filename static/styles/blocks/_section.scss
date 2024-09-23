@@ -1,4 +1,57 @@
 .section {
     padding-bottom: 140px;
-    padding-inline: 30px;
+
+    @include desktop{
+        padding-bottom: 100px;
+    }
+
+    @include tablet{
+        padding-bottom: 70px;
+    }
+
+    @include mobile{
+        padding-bottom: 50px;
+    }
+
+    &--bg-light-alt{
+        background-color: var(--color-light-alt);
+    }
+
+    &--hidden-x{
+        overflow-x: hidden;
+    }
+
+
+    &__header {
+        @include margin-bottom(55px);
+
+        padding-top: 124px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+
+        @include desktop{
+            padding-top: 80px;
+            
+        }
+        
+        @include tablet{
+            padding-top: 50px;
+            @include margin-bottom(40px);
+        }
+
+        @include mobile{
+            padding-top: 40px;
+            flex-direction: column;
+            align-items: center;
+            @include margin-bottom(30px);
+        }
+
+        &--centered{
+            @include flex-center;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
 }

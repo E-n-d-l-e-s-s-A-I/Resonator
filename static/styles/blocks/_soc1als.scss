@@ -1,0 +1,46 @@
+.soc1als {
+
+    --soc1alsIconsColor: var(--color-gray);
+    --soc1alsBgColor: inherit;
+    --soc1alsBorderRadius: 0;
+
+    &--color-light {
+        --soc1alsIconsColor: var(--color-light);
+    }
+
+    &--gray-bg{
+        --soc1alsBgColor: var(--color-gray);
+        --soc1alsBorderRadius: 50%;
+    
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+    }
+
+    &__item {
+        font-family: var(--font-family-alt);
+        font-size: 14px;
+        color: var(--soc1alsIconsColor);
+        
+        background-color: var(--soc1alsBgColor);
+        border-radius: var(--soc1alsBorderRadius);
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+
+        @include hover {
+            opacity: var(--opacity);
+        }
+    }
+
+    &__icon {
+        @include flex-center;
+        @include square(22px);
+    }
+}

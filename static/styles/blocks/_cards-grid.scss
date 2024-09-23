@@ -1,0 +1,39 @@
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+
+    @include desktop {
+        gap: 40px;
+    }
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+        height: 100%;
+        width: 100%;
+        max-width: 386px;
+        margin-inline: auto;
+
+        @include tablet {
+            &:nth-last-child(1):nth-child(odd) {
+                grid-column: span 2;
+                justify-self: center;
+            }
+        }
+
+        @include mobile {
+            &:nth-last-child(1):nth-child(odd) {
+                grid-column: auto;
+                justify-self: auto;
+            }
+        }
+    }
+}

@@ -1,7 +1,13 @@
 .button {
+    --buttonOpacity: var(--opacity);
+
     @include reset-button;
 
     @include hover {
-        opacity: var(--opacity);
+        opacity: var(--buttonOpacity);
+    }
+
+    &--without-opacity-hover{
+        --buttonOpacity: 1;
     }
 }

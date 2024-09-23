@@ -1,0 +1,33 @@
+.video{
+    &__wrapper{
+        position: relative;
+        @include flex-center;
+    }
+
+    &__content{
+        max-width: 1920px;
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+    &__paly-button{
+        @include abs-center;
+        @include square(90px);
+        @include flex-center;
+
+        content: "";
+        background-color: var(--color-light);
+        border-radius: 50%;
+
+        @include mobile{
+            @include square(60px);
+        }
+
+        @include hover{
+            color: var(--color-gray-accent);
+            background-color: var(--color-gray);
+        }
+    }
+}
