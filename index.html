@@ -56,13 +56,13 @@
                 <h1 class="header__body-title">New episode available now</h1>
                 <div class="header__body-description">Available on Apple Soundcast and Spotify.</div>
                 <ul class="header__body-soc1als">
-                    <li class="header__body-soc1als-item">
+                    <li class="header__body-soc1als__item">
                         <a href="#" class="header__body-soc1als-link">
                             <img src="./static/icons/apple-podcast.svg" alt="apple podcast" loading="lazy" width="185"
                                 height="54">
                         </a>
                     </li>
-                    <li class="header__body-soc1als-item">
+                    <li class="header__body-soc1als__item">
                         <a href="#" class="header__body-soc1als-link">
                             <img src="./static/icons/soundcloud.svg" alt="soundcloud" loading="lazy" width="174"
                                 height="54">
@@ -74,92 +74,341 @@
         </div>
     </header>
 
-    <section class="headline-podcast section container">
-        <header class="headline-podcast__header">
-            <!-- через хеддер запозиционируем -->
-            <article class="headline-podcast-card">
-                <img class="headline-podcast-card__image" src="./static/images/headline-podcast/1.jpg" alt=""
-                    loading="lazy" width="291" height="291">
-
-                <div class="headline-podcast-card__body">
-                    <div class="headline-podcast-card__body-information">
-                        <h3 class="headline-podcast-card__body-title">Timmy Mike: the nature of design</h3>
-                        <div class="headline-podcast-card__body-description">
-                            <span class="headline-podcast-card__body-description-name">Episode 1</span> •
-                            <span class="headline-podcast-card__body-description-equipment">Microphone</span> •
-                            <span class="headline-podcast-card__body-description-duration">0:13</span>
+    <main class="content">
+        <section class="section container">
+            <div class="section__body">
+                <div class="headline-podcast">
+                    <header class="headline-podcast__header">
+                        <article class="headline-podcast-card">
+                            <img class="headline-podcast-card__image" src="./static/images/headline-podcast/1.jpg" alt=""
+                                loading="lazy" width="291" height="291">
+                            <div class="headline-podcast-card__body">
+                                <div class="headline-podcast-card__body-information">
+                                    <h3 class="headline-podcast-card__body-title">Timmy Mike: the nature of design</h3>
+                                    <div class="headline-podcast-card__body-description">
+                                        <span class="headline-podcast-card__body-description-name">Episode 1</span> •
+                                        <span class="headline-podcast-card__body-description-equipment">Microphone</span> •
+                                        <span class="headline-podcast-card__body-description-duration">0:13</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="headline-podcast-card__body-link link">
+                                    Episode page
+                                    <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_5_4187)">
+                                            <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                                            <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                                stroke-width="0.989583" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_5_4187">
+                                                <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <div class="headline-podcast-card__body-controlls controlls">
+                                    <button class="controlls__play-button play-button play-button--small-mobile button"></button>
+                                    <button
+                                        class="controlls__rewind-button rewind-button rewind-button--small-mobile button">10s</button>
+                                    <button
+                                        class="controlls__rewind-button rewind-button rewind-button--small-mobile button">10s</button>
+                                    <div class="controlls__progress-bar progress-bar"></div>
+                                    <div class="controlls__times">
+                                        <span class="controlls__times-current-time">00:00</span> / <span
+                                            class="controlls__times-total-time">00:00</span>
+                                    </div>
+                                    <button class="controlls__volume-button volume-button volume-button--small-mobile button">
+                                        <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.62866 3.06412C9.97885 3.21976 10.154 3.49214 10.154 3.88124V15.0875C10.154 15.4766 9.97885 15.7489 9.62866 15.9046C9.47302 15.9824 9.33683 16.0213 9.2201 16.0213C9.06446 16.0213 8.8699 15.9435 8.63644 15.7879L4.84267 12.7528H1.74928C1.12671 12.7528 0.81543 12.4416 0.81543 11.819V7.14972C0.81543 6.52716 1.12671 6.21587 1.74928 6.21587H4.84267L8.63644 3.12249C8.79208 3.00576 8.98664 2.94739 9.2201 2.94739C9.33683 2.94739 9.47302 2.9863 9.62866 3.06412ZM23.1695 9.48435C23.1695 13.0252 21.9049 16.0602 19.3757 18.5894C19.2201 18.7451 19.045 18.8229 18.8504 18.8229C18.6948 18.8229 18.5392 18.7451 18.3835 18.5894C18.0333 18.2781 18.0333 17.9474 18.3835 17.5972C20.6403 15.4182 21.7687 12.7139 21.7687 9.48435C21.7687 6.25478 20.6403 3.5505 18.3835 1.37152C18.0333 1.02132 18.0333 0.690582 18.3835 0.379297C18.7337 0.0680141 19.0645 0.0680141 19.3757 0.379297C21.9049 2.90848 23.1695 5.9435 23.1695 9.48435ZM16.8076 2.77229C18.5975 4.64 19.4925 6.87735 19.4925 9.48435C19.4925 12.0914 18.5975 14.3287 16.8076 16.1964C16.652 16.3521 16.4769 16.4299 16.2824 16.4299C16.1267 16.4299 15.9711 16.3521 15.8154 16.1964C15.4652 15.8462 15.4458 15.5155 15.7571 15.2042C17.3135 13.6478 18.0917 11.7412 18.0917 9.48435C18.0917 7.22755 17.3135 5.32093 15.7571 3.76451C15.4458 3.45323 15.4652 3.12249 15.8154 2.77229C16.1656 2.4221 16.4964 2.4221 16.8076 2.77229ZM13.831 5.16529C14.9983 6.41043 15.582 7.85011 15.582 9.48435C15.582 11.1186 14.9983 12.5583 13.831 13.8034C13.7143 13.9202 13.5392 13.9785 13.3057 13.9785C13.1111 13.9785 12.9555 13.9202 12.8388 13.8034C12.5275 13.4921 12.5275 13.1614 12.8388 12.8112C13.7337 11.9163 14.1812 10.8073 14.1812 9.48435C14.1812 8.1614 13.7337 7.05245 12.8388 6.15751C12.5275 5.80731 12.5275 5.47657 12.8388 5.16529C13.1501 4.854 13.4808 4.854 13.831 5.16529Z"
+                                                fill="black" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </header>
+                    <div class="headline-podcast__body">
+                        <div class="headline-podcast__body-info">
+                            <h2 class="headline-podcast__body-title">Best places to find design inspiration</h2>
+                            <div class="headline-podcast__body-podcast-info podcast-info">
+                                <button class="podcast-info__play-button play-button"></button>
+                                <div class="podcast-info__info">
+                                    <h3 class="podcast-info__title">Episode 1</h3>
+                                    <div class="podcast-info__description">
+                                        <span class="podcast-info__category">Category</span> •
+                                        <span class="podcast-info__duration">0:13</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="headline-podcast__body-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                    labore
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                    ut
+                                    aliquip.<br><br>Ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit
+                                    esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                    culpa qui officia deserunt mollit anim id est laborum. </p>
+                            </div>
+                            <a href="#" class="headline-podcast__body-link link">Episode page
+                                <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_5_4187)">
+                                        <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                                        <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                            stroke-width="0.989583" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_5_4187">
+                                            <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
                         </div>
-                    </div>
-
-                    <a href="#" class="headline-podcast-card__body-link link">
-                        Episode page
-                        <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_5_4187)">
-                                <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
-                                <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
-                                    stroke-width="0.989583" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_5_4187">
-                                    <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-
-                    </a>
-
-                    <div class="headline-podcast-card__body-controlls controlls">
-                        <button class="controlls__play-button play-button play-button--small-mobile button"></button>
-                        <button
-                            class="controlls__rewind-button rewind-button rewind-button--small-mobile button">10s</button>
-                        <button
-                            class="controlls__rewind-button rewind-button rewind-button--small-mobile button">10s</button>
-                        <div class="controlls__progress-bar progress-bar"></div>
-                        <div class="controlls__times">
-                            <span class="controlls__times-current-time">00:00</span> / <span
-                                class="controlls__times-total-time">00:00</span>
-                        </div>
-                        <button class="controlls__volume-button volume-button volume-button--small-mobile button">
-                            <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9.62866 3.06412C9.97885 3.21976 10.154 3.49214 10.154 3.88124V15.0875C10.154 15.4766 9.97885 15.7489 9.62866 15.9046C9.47302 15.9824 9.33683 16.0213 9.2201 16.0213C9.06446 16.0213 8.8699 15.9435 8.63644 15.7879L4.84267 12.7528H1.74928C1.12671 12.7528 0.81543 12.4416 0.81543 11.819V7.14972C0.81543 6.52716 1.12671 6.21587 1.74928 6.21587H4.84267L8.63644 3.12249C8.79208 3.00576 8.98664 2.94739 9.2201 2.94739C9.33683 2.94739 9.47302 2.9863 9.62866 3.06412ZM23.1695 9.48435C23.1695 13.0252 21.9049 16.0602 19.3757 18.5894C19.2201 18.7451 19.045 18.8229 18.8504 18.8229C18.6948 18.8229 18.5392 18.7451 18.3835 18.5894C18.0333 18.2781 18.0333 17.9474 18.3835 17.5972C20.6403 15.4182 21.7687 12.7139 21.7687 9.48435C21.7687 6.25478 20.6403 3.5505 18.3835 1.37152C18.0333 1.02132 18.0333 0.690582 18.3835 0.379297C18.7337 0.0680141 19.0645 0.0680141 19.3757 0.379297C21.9049 2.90848 23.1695 5.9435 23.1695 9.48435ZM16.8076 2.77229C18.5975 4.64 19.4925 6.87735 19.4925 9.48435C19.4925 12.0914 18.5975 14.3287 16.8076 16.1964C16.652 16.3521 16.4769 16.4299 16.2824 16.4299C16.1267 16.4299 15.9711 16.3521 15.8154 16.1964C15.4652 15.8462 15.4458 15.5155 15.7571 15.2042C17.3135 13.6478 18.0917 11.7412 18.0917 9.48435C18.0917 7.22755 17.3135 5.32093 15.7571 3.76451C15.4458 3.45323 15.4652 3.12249 15.8154 2.77229C16.1656 2.4221 16.4964 2.4221 16.8076 2.77229ZM13.831 5.16529C14.9983 6.41043 15.582 7.85011 15.582 9.48435C15.582 11.1186 14.9983 12.5583 13.831 13.8034C13.7143 13.9202 13.5392 13.9785 13.3057 13.9785C13.1111 13.9785 12.9555 13.9202 12.8388 13.8034C12.5275 13.4921 12.5275 13.1614 12.8388 12.8112C13.7337 11.9163 14.1812 10.8073 14.1812 9.48435C14.1812 8.1614 13.7337 7.05245 12.8388 6.15751C12.5275 5.80731 12.5275 5.47657 12.8388 5.16529C13.1501 4.854 13.4808 4.854 13.831 5.16529Z"
-                                    fill="black" />
-                            </svg>
-                        </button>
+                        <img class="headline-podcast__body-image" src="./static/images/headline-podcast/2.jpg" alt="" loading="lazy"
+                            width="525" height="519">
                     </div>
                 </div>
-            </article>
-        </header>
+            </div>
+        </section>
 
-        <div class="headline-podcast__body">
-            <div class="headline-podcast__body-info">
-                <h2 class="headline-podcast__body-title">Best places to find design inspiration</h2>
-                <div class="headline-podcast__body-podcast-info podcast-info">
-                    <button class="podcast-info__play-button play-button"></button>
-                    <div class="podcast-info__info">
-                        <h3 class="podcast-info__title">Episode 1</h3>
-                        <div class="podcast-info__description">
-                            <span class="podcast-info__category">Category</span> •
-                            <span class="podcast-info__duration">0:13</span>
+        <section class="section section--bg-light-alt section--hidden-x">
+            <header class="section__header section__header--centered">
+                <h2 class="section__title">Top podcasts:</h2>
+                <div class="section__description">
+                    <p>Discover the selection of the most popular podcasts.</p>
+                </div>
+            </header>
+            <div class="section__body">
+                <div class="top-podcasts">
+                    <div class="top-podcasts__slider">
+                        <ul class="top-podcasts__slider-list">
+                            <li class="top-podcasts__slider-item">
+                                <div class="card">
+                                    <div class="card__image-wrapper">
+                                        <img class="card__image" src="./static/images/top-podcasts/1.jpg" alt="" loading="lazy" width="392" height="392">
+                                        <a class="card__link"href="#">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__description">
+                                            <span class="card__description-episode">Episode 7</span> •
+                                            <span class="card__description-cate gory">Technology</span>
+                                        </div>
 
-                        </div>
+                                        <h3 class="card__title underline">
+                                            <a href="" class="card__title-link">SRKP selects: open your mind easy</a>
+                                        </h3>
+                                        <a href="#" class="link">Episode page
+                                            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_5_4187)">
+                                                    <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                                                    <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                                        stroke-width="0.989583" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_5_4187">
+                                                        <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="top-podcasts__slider-item">
+                                <div class="card">
+                                    <div class="card__image-wrapper">
+                                        <img class="card__image" src="./static/images/top-podcasts/2.jpg" alt="" loading="lazy" width="392" height="392">
+                                        <a class="card__link"href="#">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="card__body">
+                                        <div class="card__description">
+                                            <span class="card__description-episode">Episode 8</span> •
+                                            <span class="card__description-cate gory">Technology</span>
+                                        </div>
+
+                                        <h3 class="card__title underline">
+                                            <a href="" class="card__title-link">SRKP selects: keep your watch</a>
+                                        </h3>
+                                        <a href="#" class="link">Episode page
+                                            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_5_4187)">
+                                                    <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                                                    <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                                        stroke-width="0.989583" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_5_4187">
+                                                        <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="top-podcasts__slider-item">
+                                <div class="card">
+                                    <div class="card__image-wrapper">
+                                        <img class="card__image" src="./static/images/top-podcasts/3.jpg" alt="" loading="lazy" width="392" height="392">
+                                        <a class="card__link"href="#">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__description">
+                                            <span class="card__description-episode">Episode 9</span> •
+                                            <span class="card__description-cate gory">Technology</span>
+                                        </div>
+
+                                        <h3 class="card__title underline">
+                                            <a href="" class="card__title-link">SRKP selects: to hide behind safe</a>
+                                        </h3>
+                                        <a href="#" class="link">Episode page
+                                            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_5_4187)">
+                                                    <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                                                    <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                                        stroke-width="0.989583" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_5_4187">
+                                                        <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="top-podcasts__slider-item">
+                                <div class="card">
+                                    <div class="card__image-wrapper">
+                                        <img class="card__image" src="./static/images/top-podcasts/1.jpg" alt="" loading="lazy" width="392" height="392">
+                                        <a class="card__link"href="#">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__description">
+                                            <span class="card__description-episode">Episode 7</span> •
+                                            <span class="card__description-cate gory">Technology</span>
+                                        </div>
+
+                                        <h3 class="card__title underline">
+                                            <a href="" class="card__title-link">SRKP selects: open your mind easy</a>
+                                        </h3>
+                                        <a href="#" class="link">Episode page
+                                            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_5_4187)">
+                                                    <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                                                    <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                                        stroke-width="0.989583" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_5_4187">
+                                                        <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="top-podcasts__slider-item">
+                                <div class="card">
+                                    <div class="card__image-wrapper">
+                                        <img class="card__image" src="./static/images/top-podcasts/1.jpg" alt="" loading="lazy" width="392" height="392">
+                                        <a class="card__link"href="#">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__description">
+                                            <span class="card__description-episode">Episode 7</span> •
+                                            <span class="card__description-cate gory">Technology</span>
+                                        </div>
+
+                                        <h3 class="card__title underline">
+                                            <a href="" class="card__title-link">SRKP selects: open your mind easy</a>
+                                        </h3>
+                                        <a href="#" class="link">Episode page
+                                            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_5_4187)">
+                                                    <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                                                    <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                                        stroke-width="0.989583" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_5_4187">
+                                                        <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="top-podcasts__pagination pagination">
+                        <ul class="pagination__list">
+                            <li class="pagination__item">
+                                <button class="pagination__button button">
+                                    <span class="visually-hidden">First Slide</span>
+                                </button>
+                            </li>
+
+                            <li class="pagination__item">
+                                <button class="pagination__button pagination__button--selected button">
+                                    <span class="visually-hidden">First Slide</span>
+                                </button>
+                            </li>
+
+                            <li class="pagination__item">
+                                <button class="pagination__button button">
+                                    <span class="visually-hidden">First Slide</span>
+                                </button>
+                            </li>
+
+                            <li class="pagination__item">
+                                <button class="pagination__button button">
+                                    <span class="visually-hidden">First Slide</span>
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="headline-podcast__body-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip.<br><br>Ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                        velit
-                        esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum. </p>
-                </div>
-
-                <a href="#" class="headline-podcast__body-link link">Episode page
+        <section class="section">
+            <header class="section__header container">
+                <h2 class="section__title">Essential episodes:</h2>
+                <a href="#" class="link">View all episodes
                     <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_5_4187)">
                             <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
@@ -173,13 +422,597 @@
                         </defs>
                     </svg>
                 </a>
+            </header>
+            <div class="section__body">
+                <div class="essential-episodes">
+                    <ul class="essential-episodes__grid cards-grid container">
+                        <li class="cards-grid__item">
+                            <div class="card card--column">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="./static/images/essential-episodes/1.jpg" alt="" loading="lazy" width="392" height="392">
+                                    <a class="card__link"href="#">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                            </svg>
+                                    </a>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__description">
+                                        <span class="card__description-episode">Episode 1</span> •
+                                        <span class="card__description-cate gory">Technology</span>
+                                    </div>
+
+                                    
+                                    <h3 class="card__title underline">
+                                            <a href="#" class="card__title-link">SRKP selects: how the new ages work</a>
+                                    </h3>
+                                    
+
+                                    <div class="card__soc1als soc1als">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <span class="soc1als-description">Share</span>
+                                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10.2813 0.656174C15.7932 0.656174 20.2618 5.12362 20.2618 10.6367C20.2618 16.1486 15.7932 20.6172 10.2813 20.6172C4.7694 20.6172 0.300781 16.1486 0.300781 10.6367C0.300781 5.12479 4.7694 0.656174 10.2813 0.656174ZM12.3534 12.8987L7.75731 10.678C7.75887 10.6503 7.76121 10.6219 7.76121 10.5942L12.3522 8.37625C12.6618 8.60939 13.0446 8.74896 13.4614 8.74896C14.4793 8.74896 15.3051 7.9244 15.3051 6.9053C15.3051 5.8858 14.4793 5.06124 13.4614 5.06124C12.4446 5.06124 11.6185 5.88736 11.6185 6.9053V6.90647L7.06764 9.10452C6.75185 8.85383 6.3538 8.70296 5.91988 8.70296C4.90195 8.70296 4.07583 9.52869 4.07583 10.547C4.07583 11.5649 4.90195 12.3907 5.91988 12.3907C6.28792 12.3907 6.62983 12.2811 6.91793 12.0952L11.6201 14.3681V14.3692C11.6201 15.3887 12.4446 16.2133 13.4626 16.2133C14.4805 16.2133 15.3066 15.3876 15.3066 14.3692C15.3066 13.3501 14.4805 12.5256 13.4626 12.5256C13.0458 12.5256 12.6618 12.6651 12.3534 12.8987Z" fill="#8E8B8C"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="cards-grid__item">
+                            <div class="card card--column">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="./static/images/essential-episodes/2.jpg" alt="" loading="lazy" width="392" height="392">
+                                    <a class="card__link"href="#">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                            </svg>
+                                    </a>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__description">
+                                        <span class="card__description-episode">Episode 2</span> •
+                                        <span class="card__description-cate gory">Technology</span>
+                                    </div>
+
+                                    <h3 class="card__title underline">
+                                        <a href="" class="card__title-link">SRKP selects: a new mindset today</a>
+                                    </h3>
+
+                                    <div class="card__soc1als soc1als">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <a href="" class="soc1als__link">
+                                                        <span class="soc1als-description">Share</span>
+                                                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.2813 0.656174C15.7932 0.656174 20.2618 5.12362 20.2618 10.6367C20.2618 16.1486 15.7932 20.6172 10.2813 20.6172C4.7694 20.6172 0.300781 16.1486 0.300781 10.6367C0.300781 5.12479 4.7694 0.656174 10.2813 0.656174ZM12.3534 12.8987L7.75731 10.678C7.75887 10.6503 7.76121 10.6219 7.76121 10.5942L12.3522 8.37625C12.6618 8.60939 13.0446 8.74896 13.4614 8.74896C14.4793 8.74896 15.3051 7.9244 15.3051 6.9053C15.3051 5.8858 14.4793 5.06124 13.4614 5.06124C12.4446 5.06124 11.6185 5.88736 11.6185 6.9053V6.90647L7.06764 9.10452C6.75185 8.85383 6.3538 8.70296 5.91988 8.70296C4.90195 8.70296 4.07583 9.52869 4.07583 10.547C4.07583 11.5649 4.90195 12.3907 5.91988 12.3907C6.28792 12.3907 6.62983 12.2811 6.91793 12.0952L11.6201 14.3681V14.3692C11.6201 15.3887 12.4446 16.2133 13.4626 16.2133C14.4805 16.2133 15.3066 15.3876 15.3066 14.3692C15.3066 13.3501 14.4805 12.5256 13.4626 12.5256C13.0458 12.5256 12.6618 12.6651 12.3534 12.8987Z" fill="#8E8B8C"/>
+                                                        </svg>
+                                                    </a>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="cards-grid__item">
+                            <div class="card card--column">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="./static/images/essential-episodes/3.jpg" alt="" loading="lazy" width="392" height="392">
+                                    <a class="card__link"href="#">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                            </svg>
+                                    </a>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__description">
+                                        <span class="card__description-episode">Episode 3</span> •
+                                        <span class="card__description-cate gory">Technology</span>
+                                    </div>
+
+                                    <h3 class="card__title underline">
+                                        <a href="" class="card__title-link">SRKP selects: the latest trends now</a>
+                                    </h3>
+
+                                    <div class="card__soc1als soc1als">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <span class="soc1als-description">Share</span>
+                                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10.2813 0.656174C15.7932 0.656174 20.2618 5.12362 20.2618 10.6367C20.2618 16.1486 15.7932 20.6172 10.2813 20.6172C4.7694 20.6172 0.300781 16.1486 0.300781 10.6367C0.300781 5.12479 4.7694 0.656174 10.2813 0.656174ZM12.3534 12.8987L7.75731 10.678C7.75887 10.6503 7.76121 10.6219 7.76121 10.5942L12.3522 8.37625C12.6618 8.60939 13.0446 8.74896 13.4614 8.74896C14.4793 8.74896 15.3051 7.9244 15.3051 6.9053C15.3051 5.8858 14.4793 5.06124 13.4614 5.06124C12.4446 5.06124 11.6185 5.88736 11.6185 6.9053V6.90647L7.06764 9.10452C6.75185 8.85383 6.3538 8.70296 5.91988 8.70296C4.90195 8.70296 4.07583 9.52869 4.07583 10.547C4.07583 11.5649 4.90195 12.3907 5.91988 12.3907C6.28792 12.3907 6.62983 12.2811 6.91793 12.0952L11.6201 14.3681V14.3692C11.6201 15.3887 12.4446 16.2133 13.4626 16.2133C14.4805 16.2133 15.3066 15.3876 15.3066 14.3692C15.3066 13.3501 14.4805 12.5256 13.4626 12.5256C13.0458 12.5256 12.6618 12.6651 12.3534 12.8987Z" fill="#8E8B8C"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="cards-grid__item">
+                            <div class="card card--column">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="./static/images/essential-episodes/4.jpg" alt="" loading="lazy" width="392" height="392">
+                                    <a class="card__link"href="#">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                            </svg>
+                                    </a>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__description">
+                                        <span class="card__description-episode">Episode 4</span> •
+                                        <span class="card__description-cate gory">Technology</span>
+                                    </div>
+
+                                    <h3 class="card__title underline">
+                                        <a href="" class="card__title-link">SRKP selects: organize your day</a>
+                                    </h3>
+
+                                    <div class="card__soc1als soc1als">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <span class="soc1als-description">Share</span>
+                                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10.2813 0.656174C15.7932 0.656174 20.2618 5.12362 20.2618 10.6367C20.2618 16.1486 15.7932 20.6172 10.2813 20.6172C4.7694 20.6172 0.300781 16.1486 0.300781 10.6367C0.300781 5.12479 4.7694 0.656174 10.2813 0.656174ZM12.3534 12.8987L7.75731 10.678C7.75887 10.6503 7.76121 10.6219 7.76121 10.5942L12.3522 8.37625C12.6618 8.60939 13.0446 8.74896 13.4614 8.74896C14.4793 8.74896 15.3051 7.9244 15.3051 6.9053C15.3051 5.8858 14.4793 5.06124 13.4614 5.06124C12.4446 5.06124 11.6185 5.88736 11.6185 6.9053V6.90647L7.06764 9.10452C6.75185 8.85383 6.3538 8.70296 5.91988 8.70296C4.90195 8.70296 4.07583 9.52869 4.07583 10.547C4.07583 11.5649 4.90195 12.3907 5.91988 12.3907C6.28792 12.3907 6.62983 12.2811 6.91793 12.0952L11.6201 14.3681V14.3692C11.6201 15.3887 12.4446 16.2133 13.4626 16.2133C14.4805 16.2133 15.3066 15.3876 15.3066 14.3692C15.3066 13.3501 14.4805 12.5256 13.4626 12.5256C13.0458 12.5256 12.6618 12.6651 12.3534 12.8987Z" fill="#8E8B8C"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="cards-grid__item">
+                            <div class="card card--column">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="./static/images/essential-episodes/5.jpg" alt="" loading="lazy" width="392" height="392">
+                                    <a class="card__link"href="#">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                            </svg>
+                                    </a>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__description">
+                                        <span class="card__description-episode">Episode 5</span> •
+                                        <span class="card__description-cate gory">Technology</span>
+                                    </div>
+
+                                    <h3 class="card__title underline">
+                                        <a href="" class="card__title-link">SRKP selects: how to plan your work</a>
+                                    </h3>
+
+                                    <div class="card__soc1als soc1als">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <span class="soc1als-description">Share</span>
+                                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10.2813 0.656174C15.7932 0.656174 20.2618 5.12362 20.2618 10.6367C20.2618 16.1486 15.7932 20.6172 10.2813 20.6172C4.7694 20.6172 0.300781 16.1486 0.300781 10.6367C0.300781 5.12479 4.7694 0.656174 10.2813 0.656174ZM12.3534 12.8987L7.75731 10.678C7.75887 10.6503 7.76121 10.6219 7.76121 10.5942L12.3522 8.37625C12.6618 8.60939 13.0446 8.74896 13.4614 8.74896C14.4793 8.74896 15.3051 7.9244 15.3051 6.9053C15.3051 5.8858 14.4793 5.06124 13.4614 5.06124C12.4446 5.06124 11.6185 5.88736 11.6185 6.9053V6.90647L7.06764 9.10452C6.75185 8.85383 6.3538 8.70296 5.91988 8.70296C4.90195 8.70296 4.07583 9.52869 4.07583 10.547C4.07583 11.5649 4.90195 12.3907 5.91988 12.3907C6.28792 12.3907 6.62983 12.2811 6.91793 12.0952L11.6201 14.3681V14.3692C11.6201 15.3887 12.4446 16.2133 13.4626 16.2133C14.4805 16.2133 15.3066 15.3876 15.3066 14.3692C15.3066 13.3501 14.4805 12.5256 13.4626 12.5256C13.0458 12.5256 12.6618 12.6651 12.3534 12.8987Z" fill="#8E8B8C"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="cards-grid__item">
+                            <div class="card card--column">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="./static/images/essential-episodes/6.jpg" alt="" loading="lazy" width="392" height="392">
+                                    <a class="card__link"href="#">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.17911 2.55847C3.17911 2.55847 3.57859 2.14829 4.37756 1.32793C5.17652 0.507567 6.71738 0.0973854 9.00012 0.0973854C11.2829 0.0973854 13.2232 0.917748 14.8211 2.55847C16.4191 4.1992 17.218 6.18947 17.218 8.52929V15.0779C17.218 15.8484 16.9469 16.5118 16.4048 17.0682C15.8626 17.6246 15.2206 17.9028 14.4787 17.9028H11.7394V10.3698H15.3776V8.52929C15.3776 6.70309 14.7569 5.1551 13.5157 3.88532C12.2744 2.61554 10.7693 1.98065 9.00012 1.98065C7.23099 1.98065 5.72581 2.61554 4.48456 3.88532C3.24332 5.1551 2.62269 6.70309 2.62269 8.52929V10.3698H6.26083V17.9028H3.52153C2.77963 17.9028 2.13761 17.6246 1.59546 17.0682C1.0533 16.5118 0.782227 15.8484 0.782227 15.0779V8.52929C0.782227 6.18947 1.58119 4.1992 3.17911 2.55847Z" fill="black"/>
+                                            </svg>
+                                    </a>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__description">
+                                        <span class="card__description-episode">Episode 6</span> •
+                                        <span class="card__description-cate gory">Technology</span>
+                                    </div>
+
+                                    <h3 class="card__title underline">
+                                        <a href="" class="card__title-link">SRKP selects: trying the best phones</a>
+                                    </h3>
+
+                                    <div class="card__soc1als soc1als">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <span class="soc1als-description">Share</span>
+                                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10.2813 0.656174C15.7932 0.656174 20.2618 5.12362 20.2618 10.6367C20.2618 16.1486 15.7932 20.6172 10.2813 20.6172C4.7694 20.6172 0.300781 16.1486 0.300781 10.6367C0.300781 5.12479 4.7694 0.656174 10.2813 0.656174ZM12.3534 12.8987L7.75731 10.678C7.75887 10.6503 7.76121 10.6219 7.76121 10.5942L12.3522 8.37625C12.6618 8.60939 13.0446 8.74896 13.4614 8.74896C14.4793 8.74896 15.3051 7.9244 15.3051 6.9053C15.3051 5.8858 14.4793 5.06124 13.4614 5.06124C12.4446 5.06124 11.6185 5.88736 11.6185 6.9053V6.90647L7.06764 9.10452C6.75185 8.85383 6.3538 8.70296 5.91988 8.70296C4.90195 8.70296 4.07583 9.52869 4.07583 10.547C4.07583 11.5649 4.90195 12.3907 5.91988 12.3907C6.28792 12.3907 6.62983 12.2811 6.91793 12.0952L11.6201 14.3681V14.3692C11.6201 15.3887 12.4446 16.2133 13.4626 16.2133C14.4805 16.2133 15.3066 15.3876 15.3066 14.3692C15.3066 13.3501 14.4805 12.5256 13.4626 12.5256C13.0458 12.5256 12.6618 12.6651 12.3534 12.8987Z" fill="#8E8B8C"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="essential-episodes__video video">
+                        <div class="video__wrapper">
+                            <video class="video__content" src="#" poster="./static/images/essential-episodes/video.jpg">
+                            </video>
+
+                            <button class="video__paly-button button button--without-opacity-hover">
+                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.1875 19.3281L15.8125 9.95312L0.1875 0.578125V19.3281Z" fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <img class="headline-podcast__body-image" src="./static/images/headline-podcast/2.jpg" alt="" loading="lazy"
-                width="525" height="519">
+        <section class="section container">
+            <header class="section__header">
+                <h2 class="section__title">Meet your hosts:</h2>
+                <a href="#" class="link">View all of them
+                    <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_5_4187)">
+                            <path d="M17.8125 7.51825H0" stroke="black" stroke-width="0.989583" />
+                            <path d="M12.3701 1.58075L18.3076 7.51825L12.3701 13.4557" stroke="black"
+                                stroke-width="0.989583" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_5_4187">
+                                <rect width="19" height="13" fill="white" transform="translate(0 0.96875)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </header>
+            <div class="section__body">
+                <div class="hosts">
+                    <ul class="cards-grid hosts__list">
+                        <li class="cards-grid__item">
+                            <div class="card card--column">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="./static/images/hosts/1.jpg" alt="" loading="lazy" width="386" height="447    ">
+                                </div>
+                                <div class="card__body">                          
+                                    <h3 class="card__title">
+                                            <a href="#" class="card__title-link">Bella Jimenez</a>
+                                    </h3>
+
+                                    <div class="card__subtitle">
+                                        <p>
+                                            Creative Strategist
+                                        </p>
+                                    </div>
+
+                                    <div class="card__soc1als soc1als soc1als--color-light soc1als--gray-bg">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <div class="soc1als__icon">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_5_4134)">
+                                                                <path d="M1.89057 11.2285V5.73924H0.510742V3.84758L1.89057 3.84672L1.88864 2.73257C1.88864 1.18935 2.30719 0.249958 4.12487 0.249958H6.00002V2.14247H4.69224C3.98421 2.14247 3.95055 2.40664 3.95055 2.89982L3.94776 3.84672H6.01782L5.81755 5.73859L3.94905 5.73924L3.94776 11.2285H1.89057Z" fill="white"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_5_4134">
+                                                                    <rect width="11" height="11" fill="white" transform="matrix(1 0 0 -1 0.5 11.25)"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <div class="soc1als__icon">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_5_4138)">
+                                                                <path d="M0.954489 3.68076V11.2285H2.9911V3.68076H0.954489ZM7.16767 3.6814C7.87999 3.6814 9.95154 3.97023 9.95154 6.54333V11.2285H7.79422V6.47686C7.79422 5.91978 7.47858 5.5306 6.79521 5.5306C5.6609 5.5306 5.73574 6.47686 5.73574 6.47686V11.2285H3.68819V3.68076H5.73574V4.27772C6.05008 4.03692 6.4219 3.6814 7.16767 3.6814ZM0.932617 1.96536C0.932617 1.39713 1.39363 0.936118 1.96186 0.936118C2.53008 0.936118 2.9911 1.39713 2.9911 1.96536C2.9911 2.53358 2.53008 2.9946 1.96186 2.9946C1.39363 2.9946 0.932617 2.53358 0.932617 1.96536Z" fill="white"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_5_4138">
+                                                                    <rect width="11" height="11" fill="white" transform="matrix(1 0 0 -1 0.921875 11.25)"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                        
+                                                </a>
+                                            </li>
+
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <div class="soc1als__icon">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_5_4142)">
+                                                                <path d="M11.0311 1.44382C10.863 1.96873 10.5062 2.41066 10.0409 2.6892C10.4966 2.63495 10.9301 2.51359 11.3343 2.33454C11.0324 2.7859 10.6503 3.18259 10.209 3.49887C10.214 3.59557 10.2159 3.69314 10.2159 3.79049C10.2159 6.76713 7.95028 10.1992 3.80716 10.1992C2.53498 10.1992 1.35135 9.8259 0.354492 9.18713C0.530749 9.20772 0.709794 9.21865 0.891627 9.21865C1.94703 9.21865 2.91859 8.85842 3.68923 8.2546C2.70395 8.23616 1.87219 7.58495 1.58551 6.69015C1.72338 6.71631 1.86404 6.73068 2.00942 6.73068C2.21527 6.73068 2.41426 6.70323 2.60295 6.65177C1.57307 6.44464 0.796422 5.53397 0.796422 4.44298V4.41489C1.10026 4.58364 1.44742 4.68528 1.81666 4.6975C1.21284 4.29417 0.814863 3.60458 0.814863 2.823C0.814863 2.41002 0.925291 2.02298 1.11956 1.69084C2.2305 3.05351 3.89015 3.95045 5.76207 4.04436C5.72369 3.87969 5.70375 3.7075 5.70375 3.53103C5.70375 2.2878 6.71241 1.27914 7.9565 1.27914C8.60406 1.27914 9.18944 1.55232 9.6005 1.9906C10.1136 1.88918 10.5961 1.70177 11.0311 1.44382Z" fill="white"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_5_4142">
+                                                                    <rect width="11" height="11" fill="white" transform="matrix(1 0 0 -1 0.34375 11.25)"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="cards-grid__item">
+                            <div class="card card--column">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="./static/images/hosts/2.jpg" alt="" loading="lazy" width="386" height="447    ">
+                                </div>
+                                <div class="card__body">                          
+                                    <h3 class="card__title">
+                                            <a href="#" class="card__title-link">Edwin Watson</a>
+                                    </h3>
+
+                                    <div class="card__subtitle">
+                                        <p>
+                                            Creative Strategist
+                                        </p>
+                                    </div>
+
+                                    <div class="card__soc1als soc1als soc1als--color-light soc1als--gray-bg">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <div class="soc1als__icon">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_5_4134)">
+                                                                <path d="M1.89057 11.2285V5.73924H0.510742V3.84758L1.89057 3.84672L1.88864 2.73257C1.88864 1.18935 2.30719 0.249958 4.12487 0.249958H6.00002V2.14247H4.69224C3.98421 2.14247 3.95055 2.40664 3.95055 2.89982L3.94776 3.84672H6.01782L5.81755 5.73859L3.94905 5.73924L3.94776 11.2285H1.89057Z" fill="white"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_5_4134">
+                                                                    <rect width="11" height="11" fill="white" transform="matrix(1 0 0 -1 0.5 11.25)"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <div class="soc1als__icon">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_5_4138)">
+                                                                <path d="M0.954489 3.68076V11.2285H2.9911V3.68076H0.954489ZM7.16767 3.6814C7.87999 3.6814 9.95154 3.97023 9.95154 6.54333V11.2285H7.79422V6.47686C7.79422 5.91978 7.47858 5.5306 6.79521 5.5306C5.6609 5.5306 5.73574 6.47686 5.73574 6.47686V11.2285H3.68819V3.68076H5.73574V4.27772C6.05008 4.03692 6.4219 3.6814 7.16767 3.6814ZM0.932617 1.96536C0.932617 1.39713 1.39363 0.936118 1.96186 0.936118C2.53008 0.936118 2.9911 1.39713 2.9911 1.96536C2.9911 2.53358 2.53008 2.9946 1.96186 2.9946C1.39363 2.9946 0.932617 2.53358 0.932617 1.96536Z" fill="white"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_5_4138">
+                                                                    <rect width="11" height="11" fill="white" transform="matrix(1 0 0 -1 0.921875 11.25)"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                        
+                                                </a>
+                                            </li>
+
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <div class="soc1als__icon">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_5_4142)">
+                                                                <path d="M11.0311 1.44382C10.863 1.96873 10.5062 2.41066 10.0409 2.6892C10.4966 2.63495 10.9301 2.51359 11.3343 2.33454C11.0324 2.7859 10.6503 3.18259 10.209 3.49887C10.214 3.59557 10.2159 3.69314 10.2159 3.79049C10.2159 6.76713 7.95028 10.1992 3.80716 10.1992C2.53498 10.1992 1.35135 9.8259 0.354492 9.18713C0.530749 9.20772 0.709794 9.21865 0.891627 9.21865C1.94703 9.21865 2.91859 8.85842 3.68923 8.2546C2.70395 8.23616 1.87219 7.58495 1.58551 6.69015C1.72338 6.71631 1.86404 6.73068 2.00942 6.73068C2.21527 6.73068 2.41426 6.70323 2.60295 6.65177C1.57307 6.44464 0.796422 5.53397 0.796422 4.44298V4.41489C1.10026 4.58364 1.44742 4.68528 1.81666 4.6975C1.21284 4.29417 0.814863 3.60458 0.814863 2.823C0.814863 2.41002 0.925291 2.02298 1.11956 1.69084C2.2305 3.05351 3.89015 3.95045 5.76207 4.04436C5.72369 3.87969 5.70375 3.7075 5.70375 3.53103C5.70375 2.2878 6.71241 1.27914 7.9565 1.27914C8.60406 1.27914 9.18944 1.55232 9.6005 1.9906C10.1136 1.88918 10.5961 1.70177 11.0311 1.44382Z" fill="white"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_5_4142">
+                                                                    <rect width="11" height="11" fill="white" transform="matrix(1 0 0 -1 0.34375 11.25)"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="cards-grid__item">
+                            <div class="card card--column">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="./static/images/hosts/3.jpg" alt="" loading="lazy" width="386" height="447">
+                                </div>
+                                <div class="card__body">                          
+                                    <h3 class="card__title">
+                                            <a href="#" class="card__title-link">Caitlin Henderson</a>
+                                    </h3>
+
+                                    <div class="card__subtitle">
+                                        <p>
+                                            Creative Strategist
+                                        </p>
+                                    </div>
+
+                                    <div class="card__soc1als soc1als soc1als--color-light soc1als--gray-bg">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <div class="soc1als__icon">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_5_4134)">
+                                                                <path d="M1.89057 11.2285V5.73924H0.510742V3.84758L1.89057 3.84672L1.88864 2.73257C1.88864 1.18935 2.30719 0.249958 4.12487 0.249958H6.00002V2.14247H4.69224C3.98421 2.14247 3.95055 2.40664 3.95055 2.89982L3.94776 3.84672H6.01782L5.81755 5.73859L3.94905 5.73924L3.94776 11.2285H1.89057Z" fill="white"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_5_4134">
+                                                                    <rect width="11" height="11" fill="white" transform="matrix(1 0 0 -1 0.5 11.25)"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <div class="soc1als__icon">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_5_4138)">
+                                                                <path d="M0.954489 3.68076V11.2285H2.9911V3.68076H0.954489ZM7.16767 3.6814C7.87999 3.6814 9.95154 3.97023 9.95154 6.54333V11.2285H7.79422V6.47686C7.79422 5.91978 7.47858 5.5306 6.79521 5.5306C5.6609 5.5306 5.73574 6.47686 5.73574 6.47686V11.2285H3.68819V3.68076H5.73574V4.27772C6.05008 4.03692 6.4219 3.6814 7.16767 3.6814ZM0.932617 1.96536C0.932617 1.39713 1.39363 0.936118 1.96186 0.936118C2.53008 0.936118 2.9911 1.39713 2.9911 1.96536C2.9911 2.53358 2.53008 2.9946 1.96186 2.9946C1.39363 2.9946 0.932617 2.53358 0.932617 1.96536Z" fill="white"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_5_4138">
+                                                                    <rect width="11" height="11" fill="white" transform="matrix(1 0 0 -1 0.921875 11.25)"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                        
+                                                </a>
+                                            </li>
+
+                                            <li class="soc1als__item">
+                                                <a href="" class="soc1als__link">
+                                                    <div class="soc1als__icon">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_5_4142)">
+                                                                <path d="M11.0311 1.44382C10.863 1.96873 10.5062 2.41066 10.0409 2.6892C10.4966 2.63495 10.9301 2.51359 11.3343 2.33454C11.0324 2.7859 10.6503 3.18259 10.209 3.49887C10.214 3.59557 10.2159 3.69314 10.2159 3.79049C10.2159 6.76713 7.95028 10.1992 3.80716 10.1992C2.53498 10.1992 1.35135 9.8259 0.354492 9.18713C0.530749 9.20772 0.709794 9.21865 0.891627 9.21865C1.94703 9.21865 2.91859 8.85842 3.68923 8.2546C2.70395 8.23616 1.87219 7.58495 1.58551 6.69015C1.72338 6.71631 1.86404 6.73068 2.00942 6.73068C2.21527 6.73068 2.41426 6.70323 2.60295 6.65177C1.57307 6.44464 0.796422 5.53397 0.796422 4.44298V4.41489C1.10026 4.58364 1.44742 4.68528 1.81666 4.6975C1.21284 4.29417 0.814863 3.60458 0.814863 2.823C0.814863 2.41002 0.925291 2.02298 1.11956 1.69084C2.2305 3.05351 3.89015 3.95045 5.76207 4.04436C5.72369 3.87969 5.70375 3.7075 5.70375 3.53103C5.70375 2.2878 6.71241 1.27914 7.9565 1.27914C8.60406 1.27914 9.18944 1.55232 9.6005 1.9906C10.1136 1.88918 10.5961 1.70177 11.0311 1.44382Z" fill="white"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_5_4142">
+                                                                    <rect width="11" height="11" fill="white" transform="matrix(1 0 0 -1 0.34375 11.25)"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <header class="footer__header container">
+            <a href="#" class="footer__logo logo">
+                <img src="./static/icons/logo-light.png" alt="Resonator" loading="lazy" width="132" height="20">
+                <div class="logo__description">
+                    <p>
+                        The great connection.
+                    </p>
+                </div>
+            </a>
+            <h2 class="footer__title h3">
+                We collaborate with ambitious brands and people; let’s build something great together.
+            </h2>
+        </header>
+        <div class="footer__body container">
+            <div class="footer__contacts footer__flex">
+                <div class="footer__flex-item">
+                    <div class="footer__contacts-title">
+                        Start a conversation:
+                    </div>
+                    <div class="footer__contacts-body">
+                        <a href="mailto:podcast@example.com">podcast@example.com</a> <br>
+                        <a href="tel:29698667033">+2 969 866 7033</a>
+                    </div>
+                </div>
+                <div class="footer__flex-item">
+                    <div class="footer__contacts-title">
+                        Find us here:
+                    </div>
+                    <div class="footer__contacts-body">
+                        <address>
+                            Brooklyn, NY 11201 <br>
+                            United States>
+                        </address>
+                    </div>
+                </div>
+                <div class="footer__flex-item">
+                    <div class="footer__contacts-title">
+                        Follow us on:
+                    </div>
+                    <div class="footer__contacts-body soc1als">
+                        <ul class="soc1als__list">
+                            <li class="soc1als__item">
+                                <a href="" class="soc1als__link">
+                                    <div class="soc1als__icon">
+                                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.1719 10.2031C21.1719 15.2891 17.4395 19.5137 12.5586 20.252V13.1562H14.9375L15.3887 10.2031H12.5586V8.31641C12.5586 7.49609 12.9688 6.7168 14.2402 6.7168H15.5117V4.21484C15.5117 4.21484 14.3633 4.00977 13.2148 4.00977C10.918 4.00977 9.40039 5.44531 9.40039 7.98828V10.2031H6.81641V13.1562H9.40039V20.252C4.51953 19.5137 0.828125 15.2891 0.828125 10.2031C0.828125 4.58398 5.38086 0.03125 11 0.03125C16.6191 0.03125 21.1719 4.58398 21.1719 10.2031Z" fill="#969696"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="soc1als__item">
+                                <a href="" class="soc1als__link">
+                                    <div class="soc1als__icon">
+                                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.3262 4.9375C19.3262 5.14258 19.3262 5.30664 19.3262 5.51172C19.3262 11.2129 15.0195 17.7344 7.10352 17.7344C4.64258 17.7344 2.38672 17.0371 0.5 15.8066C0.828125 15.8477 1.15625 15.8887 1.52539 15.8887C3.53516 15.8887 5.38086 15.1914 6.85742 14.043C4.9707 14.002 3.37109 12.7715 2.83789 11.0488C3.125 11.0898 3.37109 11.1309 3.6582 11.1309C4.02734 11.1309 4.4375 11.0488 4.76562 10.9668C2.79688 10.5566 1.32031 8.83398 1.32031 6.74219V6.70117C1.89453 7.0293 2.5918 7.19336 3.28906 7.23438C2.09961 6.45508 1.36133 5.14258 1.36133 3.66602C1.36133 2.8457 1.56641 2.10742 1.93555 1.49219C4.06836 4.07617 7.26758 5.79883 10.8359 6.00391C10.7539 5.67578 10.7129 5.34766 10.7129 5.01953C10.7129 2.64062 12.6406 0.712891 15.0195 0.712891C16.25 0.712891 17.3574 1.20508 18.1777 2.06641C19.1211 1.86133 20.0645 1.49219 20.8848 1C20.5566 2.02539 19.9004 2.8457 18.998 3.37891C19.8594 3.29688 20.7207 3.05078 21.459 2.72266C20.8848 3.58398 20.1465 4.32227 19.3262 4.9375Z" fill="#969696"/>
+                                        </svg>
+                                    </div>
+                                        
+                                </a>
+                            </li>
+
+                            <li class="soc1als__item">
+                                <a href="" class="soc1als__link">
+                                    <div class="soc1als__icon">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.6875 4.48633C12.2715 4.48633 14.4043 6.61914 14.4043 9.20312C14.4043 11.8281 12.2715 13.9199 9.6875 13.9199C7.0625 13.9199 4.9707 11.8281 4.9707 9.20312C4.9707 6.61914 7.0625 4.48633 9.6875 4.48633ZM9.6875 12.2793C11.3691 12.2793 12.7227 10.9258 12.7227 9.20312C12.7227 7.52148 11.3691 6.16797 9.6875 6.16797C7.96484 6.16797 6.61133 7.52148 6.61133 9.20312C6.61133 10.9258 8.00586 12.2793 9.6875 12.2793ZM15.6758 4.32227C15.6758 4.9375 15.1836 5.42969 14.5684 5.42969C13.9531 5.42969 13.4609 4.9375 13.4609 4.32227C13.4609 3.70703 13.9531 3.21484 14.5684 3.21484C15.1836 3.21484 15.6758 3.70703 15.6758 4.32227ZM18.793 5.42969C18.875 6.94727 18.875 11.5 18.793 13.0176C18.7109 14.4941 18.3828 15.7656 17.3164 16.873C16.25 17.9395 14.9375 18.2676 13.4609 18.3496C11.9434 18.4316 7.39062 18.4316 5.87305 18.3496C4.39648 18.2676 3.125 17.9395 2.01758 16.873C0.951172 15.7656 0.623047 14.4941 0.541016 13.0176C0.458984 11.5 0.458984 6.94727 0.541016 5.42969C0.623047 3.95312 0.951172 2.64062 2.01758 1.57422C3.125 0.507812 4.39648 0.179688 5.87305 0.0976562C7.39062 0.015625 11.9434 0.015625 13.4609 0.0976562C14.9375 0.179688 16.25 0.507812 17.3164 1.57422C18.3828 2.64062 18.7109 3.95312 18.793 5.42969ZM16.8242 14.6172C17.3164 13.4277 17.1934 10.5566 17.1934 9.20312C17.1934 7.89062 17.3164 5.01953 16.8242 3.78906C16.4961 3.00977 15.8809 2.35352 15.1016 2.06641C13.8711 1.57422 11 1.69727 9.6875 1.69727C8.33398 1.69727 5.46289 1.57422 4.27344 2.06641C3.45312 2.39453 2.83789 3.00977 2.50977 3.78906C2.01758 5.01953 2.14062 7.89062 2.14062 9.20312C2.14062 10.5566 2.01758 13.4277 2.50977 14.6172C2.83789 15.4375 3.45312 16.0527 4.27344 16.3809C5.46289 16.873 8.33398 16.75 9.6875 16.75C11 16.75 13.8711 16.873 15.1016 16.3809C15.8809 16.0527 16.5371 15.4375 16.8242 14.6172Z" fill="#969696"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="soc1als__item">
+                                <a href="" class="soc1als__link">
+                                    <div class="soc1als__icon">
+                                        <svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22.3926 2.83008C22.8848 4.55273 22.8848 8.24414 22.8848 8.24414C22.8848 8.24414 22.8848 11.8945 22.3926 13.6582C22.1465 14.6426 21.3672 15.3809 20.4238 15.627C18.6602 16.0781 11.6875 16.0781 11.6875 16.0781C11.6875 16.0781 4.67383 16.0781 2.91016 15.627C1.9668 15.3809 1.1875 14.6426 0.941406 13.6582C0.449219 11.8945 0.449219 8.24414 0.449219 8.24414C0.449219 8.24414 0.449219 4.55273 0.941406 2.83008C1.1875 1.8457 1.9668 1.06641 2.91016 0.820312C4.67383 0.328125 11.6875 0.328125 11.6875 0.328125C11.6875 0.328125 18.6602 0.328125 20.4238 0.820312C21.3672 1.06641 22.1465 1.8457 22.3926 2.83008ZM9.39062 11.5664L15.2148 8.24414L9.39062 4.92188V11.5664Z" fill="#969696"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__extra footer__flex  footer__flex--small-row-gap-mobile">
+                <div class="footer__flex-item">
+                    <a href="#" class="footer__extra-link">Terms & Conditions</a>
+                </div>
+                <div class="footer__flex-item">
+                    <a href="#" class="footer__extra-link">Privacy Policy</a>
+                </div>
+                <div class="footer__flex-item">
+                    <a href="#" class="footer__extra-link">© 2021 <span class="accent-font-color">Qode Interactive.</span> All Rights Reserved</a>
+                </div>
+            </div>
         </div>
-
-    </section>
+    </footer>
 </body>
 
 </html>
