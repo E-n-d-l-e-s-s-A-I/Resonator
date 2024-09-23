@@ -1,10 +1,10 @@
 body {
-    @include fluid-text($max: 18, $min: 16);
+    @include fluid-text($max: 18, $min: 14);
 
     font-family: var(--font-family-base);
     font-weight: 400px;
     line-height: 1.27;
-    color: var(--color-dark);
+    color: black;
     background-color: var(--color-light);
 }
 
@@ -37,10 +37,10 @@ h1,
 
 h2,
 .h2 {
-    @include fluid-text($max: 50, $min: 26);
+    @include fluid-text($max: 50, $min: 36);
 }
 
 h3,
 .h3 {
-    @include fluid-text($max: 34, $min: 20);
+    @include fluid-text($max: 27, $min: 20);
 }

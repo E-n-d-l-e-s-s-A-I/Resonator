@@ -7,6 +7,7 @@
 "global";
 
 @import "./blocks/section",
+"./blocks/logo",
 "./blocks/button",
 "./blocks/link",
 "./blocks/search-button",
@@ -16,7 +17,16 @@
 "./blocks/volume-button",
 "./blocks/headline-podcast-card",
 "./blocks/controlls",
-"./blocks/podcast-info";
+"./blocks/podcast-info",
+"./blocks/card",
+"./blocks/pagination",
+"./blocks/soc1als",
+"./blocks/video",
+"./blocks/cards-grid";
 
-@import "./blocks/header",
-"./blocks/headline-podcast";
+@import "./blocks/sections/header",
+"./blocks/sections/headline-podcast",
+"./blocks/sections/top-podcasts",
+"./blocks/sections/essential-episodes",
+"./blocks/sections/hosts",
+"./blocks/sections/footer";

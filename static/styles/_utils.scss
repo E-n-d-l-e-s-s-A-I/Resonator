@@ -31,3 +31,10 @@
         display: none !important;
     }
 }
+.underline {
+    border-bottom: 2px solid var(--color-dark);
+}
+
+.accent-font-color {
+    color: var(--color-gray-accent);
+}

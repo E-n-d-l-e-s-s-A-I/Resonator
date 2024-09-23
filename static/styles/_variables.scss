@@ -1,5 +1,5 @@
 :root {
-    --color-dark: #191A23;
+    --color-dark: #000000;
     --color-light: #FFFFFF;
     --color-light-alt: #F8F8F8;
     --color-gray: #8E8B8C;
@@ -15,10 +15,8 @@
     --font-family-base: "Open Sans", sans-serif;
     --font-family-alt: "Lato", sans-serif;
     --container-width: 1300px;
-    --container-padding-x: 20px; // из мобильной версии
-
-
-    --section-padding-y: 70px; // расстояние между секциями
+    --container-padding-x: 30px;
+        --section-padding-y: 70px;
 
     --transition-duration: 0.2s;
     --opacity: 0.6;
